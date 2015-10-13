@@ -1,0 +1,32 @@
+# See http://about.travis-ci.org/docs/user/languages/php/ for more hints.
+language: php
+
+# PHP versions we want to test.
+php:
+    - 5.6
+    - 7.0
+    - nightly
+    - hhvm
+
+# We allow failures for HHVM only.
+matrix:
+    allow_failures:
+        - php: hhvm
+
+# Mandatory scripts before the app is ready to be tested.
+before_script:
+    - npm install
+    - npm install -g bower brunch
+    - bower install --config.interactive=false
+    - brunch build --production
+    - composer self-update
+    - composer install --prefer-source --optimize-autoloader --no-interaction
+
+# Run PHPUnit and generate code coverage report in Clover XML format.
+script:
+    - phpunit --coverage-clover=coverage.clover
+
+# Send generated report to Scrutinizer
+after_script:
+    - wget https://scrutinizer-ci.com/ocular.phar
+    - php ocular.phar code-coverage:upload --format=php-clover coverage.clover

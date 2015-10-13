@@ -1,5 +1,14 @@
 # Symfony Example (WIP)
 
+[![License](https://poser.pugx.org/irvyne/symfony-example/license.svg)](https://packagist.org/packages/irvyne/symfony-example)
+[![Build Status](https://travis-ci.org/Irvyne/symfony-example.svg?branch=master)](https://travis-ci.org/Irvyne/symfony-example)
+[![Code Coverage](https://scrutinizer-ci.com/g/Irvyne/symfony-example/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/Irvyne/symfony-example/?branch=master)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/Irvyne/symfony-example/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/Irvyne/symfony-example/?branch=master)
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/1a5090d2-0739-40bb-9993-bb66cb07f5a7/mini.png)](https://insight.sensiolabs.com/projects/1a5090d2-0739-40bb-9993-bb66cb07f5a7)
+[![Latest Stable Version](https://poser.pugx.org/irvyne/symfony-example/v/stable.svg)](https://packagist.org/packages/irvyne/symfony-example)
+[![Latest Unstable Version](https://poser.pugx.org/irvyne/symfony-example/v/unstable.svg)](https://packagist.org/packages/irvyne/symfony-example)
+[![Total Downloads](https://poser.pugx.org/irvyne/symfony-example/downloads.svg)](https://packagist.org/packages/irvyne/symfony-example)
+
 ## Intro
 
 Hi, I'm the intro (WIP)!

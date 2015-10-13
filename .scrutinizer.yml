@@ -1,0 +1,23 @@
+# Ignore app, bin and tests folders
+filter:
+    excluded_paths:
+        - 'app/*'
+        - 'bin/*'
+        - 'tests/*'
+
+checks:
+    php: true
+
+coding_style:
+    php:
+        spaces:
+            around_operators:
+                concatenation: false
+            other:
+                after_type_cast: false
+
+# Travis-CI send phpunit's tests reports
+tools:
+    external_code_coverage:
+        timeout: 1800
+        runs: 1
