@@ -1,0 +1,16 @@
+{
+  "name": "symfony-example",
+  "version": "0.1",
+  "author": [
+    "Thibaud BARDIN <thibaud.bardin@gmail.com>"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "bower": "^1.5.3",
+    "brunch": "^1.8.5",
+    "clean-css-brunch": "^1.7.2",
+    "javascript-brunch": "^1.7.1",
+    "sass-brunch": "^1.9.1",
+    "uglify-js-brunch": "^1.7.8"
+  }
+}

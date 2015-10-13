@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="container">
+        {% if error %}
+            <div class="alert alert-danger" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    <span class="sr-only">Close</span>
+                </button>
+                <strong>Oh snap!</strong> {{ error.messageKey|trans(error.messageData, 'security') }}
+            </div>
+        {% endif %}
+
+        <img data-src="holder.js/100px75?theme=social">
+
+        <img src="holder.js/300x200">
+
+        <form action="{{ path('login_check') }}" method="post">
+            <fieldset class="form-group">
+                <label for="username">{{ 'app.user.username'|trans }}{{ 'app.punctuation.colon'|trans }}</label>
+                <input type="text" id="username" name="_username" value="{{ last_username }}" placeholder="{{ 'app.user.placeholder.username'|trans }}" required>
+            </fieldset>
+            <fieldset class="form-group">
+                <label for="password">{{ 'app.user.password' }}{{ 'app.punctuation.colon'|trans }}</label>
+                <input type="password" id="password" name="_password" placeholder="{{ 'app.user.placeholder.username'|trans }}" required>
+            </fieldset>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox"> {{ 'app.security.remember_me'|trans }}
+                </label>
+            </div>
+            <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+            {#
+                If you want to control the URL the user
+                is redirected to on success (more details below)
+                <input type="hidden" name="_target_path" value="/account" />
+            #}
+
+            <input type="submit" class="btn btn-primary" value="{{ 'app.security.login'|trans }}">
+        </form>
+    </div>
+{% endblock %}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="{{ app.request.locale }}">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>{% block title %}Symfony Example{% endblock %}</title>
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700,300" rel="stylesheet" type="text/css">
+    {% block stylesheets %}
+        <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/material.css') }}">
+    {% endblock %}
+    {% block head_javascripts %}
+        <script src="{{ asset('js/modernizr.js') }}"></script>
+    {% endblock %}
+</head>
+<body>
+    {% block body %}{% endblock %}
+    {% block javascripts %}
+        <script src="{{ asset('js/vendor.js') }}"></script>
+        <script src="{{ asset('js/app.js') }}"></script>
+    {% endblock %}
+</body>
+</html>
