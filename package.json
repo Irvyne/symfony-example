@@ -1,10 +1,11 @@
 {
   "name": "symfony-example",
-  "version": "0.1",
+  "private": true,
+  "version": "0.0.2",
+  "license": "MIT",
   "author": [
     "Thibaud BARDIN <thibaud.bardin@gmail.com>"
   ],
-  "license": "MIT",
   "dependencies": {
     "bower": "^1.5.3",
     "brunch": "^1.8.5",
