@@ -19,5 +19,5 @@ coding_style:
 # Travis-CI send phpunit's tests reports
 tools:
     external_code_coverage:
-        timeout: 1800
+        timeout: 1200
         runs: 1

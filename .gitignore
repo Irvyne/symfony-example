@@ -1,11 +1,23 @@
-/app/config/parameters.yml
-/build/
-/phpunit.xml
-/var/
+### Cache and logs (Symfony3) ###
+/var/cache/*
+/var/logs/*
+/var/sessions/*
 !var/cache/.gitkeep
 !var/logs/.gitkeep
 !var/sessions/.gitkeep
+
+### Parameters ###
+/app/config/parameters.yml
+
+### Composer ###
 /vendor/
+/var/bootstrap.php.cache
+/var/SymfonyRequirements.php
+/bin/*
+!/bin/console
+!/bin/symfony_requirements
+
+### Compiled Assets ###
 /web/bundles/
 /web/images/
 /web/css/
@@ -16,3 +28,9 @@
 
 ### Bower ###
 /bower_components/
+
+### PHPUnit ###
+/phpunit.xml
+
+### Build data ###
+/build/

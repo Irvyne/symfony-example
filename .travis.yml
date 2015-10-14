@@ -11,7 +11,9 @@ php:
 # We allow failures for HHVM only.
 matrix:
     allow_failures:
-        - php: hhvm
+        - php:
+            - nightly
+            - hhvm
 
 # Mandatory scripts before the app is ready to be tested.
 before_script:
