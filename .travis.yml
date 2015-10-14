@@ -17,12 +17,16 @@ matrix:
 
 # Mandatory scripts before the app is ready to be tested.
 before_script:
+    - mysql -e "create database IF NOT EXISTS symfony_example;" -uroot
+    - cp app/config/parameters.yml.travis app/config/parameters.yml
     - npm install
     - npm install -g bower brunch
     - bower install --config.interactive=false
     - brunch build --production
     - composer self-update
     - composer install --prefer-source --optimize-autoloader --no-interaction
+    - bin/console doctrine:database:create
+    - bin/console doctrine:schema:update --force
 
 # Run PHPUnit and generate code coverage report in Clover XML format.
 script:
