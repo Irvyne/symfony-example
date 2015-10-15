@@ -28,7 +28,7 @@ before_script:
     - composer install --prefer-source --optimize-autoloader --no-interaction
     - bin/console doctrine:database:create --no-interaction
     - bin/console doctrine:schema:create --no-interaction
-    - bin/console cache:warmup --env=test
+    - bin/console cache:warmup --env=test --no-debug
 
 # Run PHPUnit and generate code coverage report in Clover XML format.
 script:
