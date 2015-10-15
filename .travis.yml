@@ -18,8 +18,8 @@ matrix:
 # Mandatory scripts before the app is ready to be tested.
 before_script:
     - cp app/config/parameters.yml.dist app/config/parameters.yml
-    - sed -i "s/database_user:\ */database_user:\ travis/" app/config/parameters.yml
-    - sed -i "s/database_password:\ */database_password:\ null/" app/config/parameters.yml
+    - sed -i "s/database_user:.*/database_user:\ travis/" app/config/parameters.yml
+    - sed -i "s/database_password:.*/database_password:\ null/" app/config/parameters.yml
     - npm install
     - npm install -g bower brunch
     - bower install --config.interactive=false
