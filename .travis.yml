@@ -18,10 +18,10 @@ matrix:
 # Mandatory scripts before the app is ready to be tested.
 before_script:
     - pwd
-    - cp app/config/parameters.yml.dist app/config/parameters.yml
-    - cat app/config/parameters.yml
-    - sed -i '' 's/database_user:.*/database_user:\ travis/' app/config/parameters.yml
-    - sed -i '' 's/database_password:.*/database_password:\ null/' app/config/parameters.yml
+    - cp $TRAVIS_BUILD_DIR/app/config/parameters.yml.dist $TRAVIS_BUILD_DIR/app/config/parameters.yml
+    - cat $TRAVIS_BUILD_DIR/app/config/parameters.yml
+    - sed -i '' 's/database_user:.*/database_user:\ travis/' $TRAVIS_BUILD_DIR/app/config/parameters.yml
+    - sed -i '' 's/database_password:.*/database_password:\ null/' $TRAVIS_BUILD_DIR/app/config/parameters.yml
     - npm install
     - npm install -g bower brunch
     - bower install --config.interactive=false
