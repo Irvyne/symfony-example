@@ -1,10 +1,9 @@
-# Ignore app, bin, tests and vendor folders
+# Ignore app, bin and tests folders
 filter:
     excluded_paths:
         - 'app/*'
         - 'bin/*'
         - 'tests/*'
-        - 'vendor/*'
 
 checks:
     php: true
