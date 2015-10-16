@@ -33,8 +33,8 @@ before_script:
 
 # Run PHPUnit and generate code coverage report in Clover XML format.
 script:
-    - if [[ $CODE_COVERAGE = "true" ]]; then phpunit --coverage-clover=coverage.clover; else phpunit; fi
+    - if [[ $TRAVIS_PHP_VERSION = "7.0" ]] ; then phpunit --coverage-clover=coverage.clover ; else phpunit ; fi
 
 # Send generated report to Scrutinizer
 after_script:
-    - if [[ $CODE_COVERAGE = "true" ]]; then wget https://scrutinizer-ci.com/ocular.phar && php ocular.phar code-coverage:upload --format=php-clover coverage.clover; fi
+    - if [[ $TRAVIS_PHP_VERSION = "7.0" ]] ; then wget https://scrutinizer-ci.com/ocular.phar && php ocular.phar code-coverage:upload --format=php-clover coverage.clover ; fi
